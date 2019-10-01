@@ -11,6 +11,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import GitHubCircleIcon from 'mdi-material-ui/GithubCircle';
 
 import EmptyState from '../EmptyState';
+import LandingPage from '../../class/landingPage/landingpage';
 
 const styles = (theme) => ({
   emptyStateIcon: {
@@ -44,16 +45,8 @@ class HomeContent extends Component {
     }
 
     return (
-      <EmptyState
-        title={process.env.REACT_APP_NAME}
-        description="The three musketeers, all in one pack in the form of a boilerplate app"
-        button={
-          <Fab className={classes.button} color="secondary" href="https://github.com/Phoqe/react-material-ui-firebase" rel="noopener noreferrer" target="_blank" variant="extended">
-            <GitHubCircleIcon className={classes.buttonIcon} />
-            GitHub
-          </Fab>
-        }
-      />
+      <LandingPage />
+      
     );
   }
 }
