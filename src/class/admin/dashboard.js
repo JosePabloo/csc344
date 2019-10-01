@@ -7,28 +7,28 @@ const styles = theme => ({
   
 });
 
-class LandingPage extends Component {
+class Dashboard extends Component {
   render() {
     let intro = (
       <div>
-        <h2> Welcome to your new app. Please create and account.</h2>
-        <h3> If you have already created an account, please sign in.</h3>
+        <h2> Welcome to the Dashboard page</h2>
       </div>
     );
 
     return (
       <React.Fragment>
         <div align="center">{intro}</div>
+        <BottomBar />
       </React.Fragment>
     );
   }
 }
 
-LandingPage.defaultProps = {
+Dashboard.defaultProps = {
   signedIn: false
 };
 
-LandingPage.propTypes = {
+Dashboard.propTypes = {
   // Styling
   classes: PropTypes.object.isRequired,
 
@@ -36,4 +36,4 @@ LandingPage.propTypes = {
   signedIn: PropTypes.bool.isRequired
 };
 
-export default withStyles(styles)(LandingPage);
+export default withStyles(styles)(Dashboard);

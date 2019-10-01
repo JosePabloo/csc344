@@ -90,6 +90,7 @@ class Bar extends Component {
           <Box flexGrow={1}>
             <Typography color="inherit" variant="h6">{process.env.REACT_APP_NAME}</Typography>
           </Box>
+        
 
           {signedIn &&
             <>

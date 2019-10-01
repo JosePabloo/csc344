@@ -12,6 +12,7 @@ import GitHubCircleIcon from 'mdi-material-ui/GithubCircle';
 
 import EmptyState from '../EmptyState';
 import LandingPage from '../../class/landingPage/landingpage';
+import Dashboard from '../../class/admin/dashboard';
 
 const styles = (theme) => ({
   emptyStateIcon: {
@@ -37,10 +38,7 @@ class HomeContent extends Component {
 
     if (signedIn) {
       return (
-        <EmptyState
-          icon={<HomeIcon className={classes.emptyStateIcon} color="action" />}
-          title="Home"
-        />
+        <Dashboard />
       );
     }
 
